@@ -20,7 +20,7 @@ Este projeto é composto por dois servidores que gerenciam uma lista de livros e
    pip install requests
    ```
 
-## Executando os Servidores
+### Executando os Servidores
 
 1. Inicie o book_server:
 
