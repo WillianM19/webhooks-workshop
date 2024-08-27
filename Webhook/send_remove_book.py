@@ -8,13 +8,16 @@ def send_remove_book(title):
         "title": title
     }
     
-    response = requests.post(url, headers=headers, data=json.dumps(payload))
-    
-    if response.status_code == 200:
-        print("Resposta do servidor:", response.json())
-    else:
-        print("Erro:", response.status_code, response.text)
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        
+        if response.status_code == 200:
+            print("Resposta do servidor:", response.json())
+        else:
+            print("Erro:", response.status_code, response.text)
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao enviar a solicitação: {e}")
 
 if __name__ == "__main__":
     # Exemplo de título do livro a ser removido
-    send_remove_book("O Senhor dos Anéis")
+    send_remove_book("Livro")

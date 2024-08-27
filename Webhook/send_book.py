@@ -19,4 +19,4 @@ def send_book(title, author, year):
 
 if __name__ == "__main__":
     # Exemplo de dados do livro
-    send_book("O Senhor dos Anéis", "J.R.R. Tolkien", "1954")
+    send_book("Livro", "Autor", "1954")
