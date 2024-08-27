@@ -42,7 +42,7 @@ class RemoveBookServerHandler(BaseHTTPRequestHandler):
             books = [book for book in books if book["title"] != book_title]
 
             if len(books) < initial_count:
-                # Envia a lista atualizada de volta para o servidor `book_server`
+                # Envia a lista atualizada de volta para o servidor de livros
                 response = requests.post(BOOK_SERVER_URL, json={"books": books})
                 if response.status_code == 200:
                     print(f"Livro removido: {book_title}")
